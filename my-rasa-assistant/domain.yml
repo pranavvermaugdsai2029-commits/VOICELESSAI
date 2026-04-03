@@ -1,0 +1,44 @@
+intents:
+  - sign_hello
+  - sign_yes
+  - sign_thank_you
+  - sign_a
+  - sign_b
+  - sign_c
+  - sign_i
+  - sign_okay
+  - sign_this
+
+
+
+
+
+
+responses:
+  utter_sign_hello:
+    - text: "Hello! How can I help you?"
+
+  utter_sign_yes:
+    - text: "Okay, noted.What else can I do for you?"
+
+  utter_sign_thank_you:
+    - text: "You're welcome!. What else can I do for you?"
+
+  utter_sign_okay:
+    - text: "I got that . What else can I do for you?"
+
+  utter_sign_a:
+    - text: "You signed the letter A. What else can I do for you?"
+
+  utter_sign_b:
+    - text: "You signed the letter B. What else can I do for you?"
+
+  utter_sign_c:
+    - text: "You signed the letter C. What else can I do for you?"
+
+  utter_sign_i:
+    - text: "You signed the letter I. What else can I do for you?"
+
+  utter_sign_this:
+    - text: "I understood the reference. What else can I do for you?"
+

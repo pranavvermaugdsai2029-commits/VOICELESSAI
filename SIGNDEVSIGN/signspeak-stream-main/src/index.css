@@ -1,0 +1,320 @@
+@font-face {
+    font-family: "Renogare";
+    src: url("/fonts/Renogare.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SignDETR Design System - Apple-inspired Glassmorphism */
+
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+@layer base {
+     :root {
+        /* Core blues - cool, calm, premium */
+        --background: 220 30% 6%;
+        --foreground: 210 40% 98%;
+        /* Gradient stops */
+        --gradient-start: 220 60% 8%;
+        --gradient-mid: 215 50% 12%;
+        --gradient-end: 210 45% 15%;
+        /* Glass panel colors */
+        --glass: 210 50% 95%;
+        --glass-border: 210 30% 60%;
+        --glass-shadow: 220 80% 30%;
+        /* Accent cyan/blue highlights */
+        --accent-cyan: 190 90% 60%;
+        --accent-blue: 210 100% 65%;
+        --accent-glow: 200 100% 70%;
+        --card: 215 40% 12%;
+        --card-foreground: 210 40% 98%;
+        --popover: 215 40% 10%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 200 100% 60%;
+        --primary-foreground: 220 30% 6%;
+        --secondary: 215 30% 18%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 215 25% 20%;
+        --muted-foreground: 210 20% 60%;
+        --accent: 190 80% 55%;
+        --accent-foreground: 220 30% 6%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 215 30% 25%;
+        --input: 215 30% 20%;
+        --ring: 200 100% 60%;
+        --radius: 1rem;
+        /* Loader */
+        --loader-bg: 220 40% 8%;
+        --loader-glow: 200 100% 65%;
+        /* Typewriter */
+        --typewriter-cursor: 190 100% 70%;
+    }
+    .dark {
+        --background: 220 30% 6%;
+        --foreground: 210 40% 98%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: linear-gradient( 135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-mid)) 50%, hsl(var(--gradient-end)) 100%);
+        min-height: 100vh;
+    }
+}
+
+@layer components {
+    /* Glassmorphism Panel */
+    .glass-panel {
+        background: linear-gradient( 135deg, hsla(var(--glass), 0.08) 0%, hsla(var(--glass), 0.04) 100%);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid hsla(var(--glass-border), 0.15);
+        border-radius: var(--radius);
+        box-shadow: 0 8px 32px hsla(var(--glass-shadow), 0.3), inset 0 1px 0 hsla(var(--glass), 0.1);
+    }
+    .glass-panel-strong {
+        background: linear-gradient( 135deg, hsla(var(--glass), 0.12) 0%, hsla(var(--glass), 0.06) 100%);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid hsla(var(--glass-border), 0.2);
+        border-radius: var(--radius);
+        box-shadow: 0 12px 48px hsla(var(--glass-shadow), 0.4), inset 0 1px 0 hsla(var(--glass), 0.15);
+    }
+    /* Loader styles */
+    .loader-container {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient( 135deg, hsl(var(--loader-bg)) 0%, hsl(220 35% 10%) 50%, hsl(215 40% 12%) 100%);
+    }
+    .loader-glass {
+        background: hsla(var(--glass), 0.05);
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+        border: 1px solid hsla(var(--glass-border), 0.1);
+        border-radius: 2rem;
+        padding: 3rem;
+        box-shadow: 0 0 80px hsla(var(--loader-glow), 0.2), 0 0 120px hsla(var(--loader-glow), 0.1);
+    }
+    .loader-fade-out {
+        animation: loaderFadeOut 0.8s ease-out forwards;
+    }
+    @keyframes loaderFadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+    /* Typewriter effect */
+    .typewriter-text {
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 1.125rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        color: hsl(var(--foreground));
+    }
+    .typewriter-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.2em;
+        background: hsl(var(--typewriter-cursor));
+        margin-left: 2px;
+        vertical-align: text-bottom;
+        animation: cursorBlink 1s ease-in-out infinite;
+        box-shadow: 0 0 8px hsl(var(--typewriter-cursor));
+    }
+    @keyframes cursorBlink {
+        0%,
+        50% {
+            opacity: 1;
+        }
+        51%,
+        100% {
+            opacity: 0;
+        }
+    }
+    /* Video panel styling */
+    .video-panel {
+        @apply glass-panel overflow-hidden;
+        position: relative;
+    }
+    .video-panel::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient( 135deg, hsla(var(--accent-cyan), 0.3) 0%, transparent 50%, hsla(var(--accent-blue), 0.2) 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+    .panel-label {
+        font-family: "Renogare", sans-serif;
+        font-size: 0.95rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: hsla(var(--foreground), 0.75);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+    .panel-label-icon {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: hsl(var(--accent-cyan));
+        box-shadow: 0 0 12px hsl(var(--accent-cyan));
+        animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+        0%,
+        100% {
+            opacity: 0.6;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+    /* Main content fade in */
+    .main-fade-in {
+        animation: mainFadeIn 1s ease-out forwards;
+    }
+    @keyframes mainFadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    /* Logo glow effect */
+    .logo-container {
+        position: relative;
+    }
+    .logo-container::after {
+        content: '';
+        position: absolute;
+        inset: -20px;
+        background: radial-gradient( ellipse at center, hsla(var(--accent-glow), 0.15) 0%, transparent 70%);
+        z-index: -1;
+        filter: blur(20px);
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        background: linear-gradient( 135deg, hsl(var(--accent-cyan)) 0%, hsl(var(--accent-blue)) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .glow-cyan {
+        box-shadow: 0 0 20px hsla(var(--accent-cyan), 0.4);
+    }
+    .glow-blue {
+        box-shadow: 0 0 20px hsla(var(--accent-blue), 0.4);
+    }
+    /* Glass UI panel (Apple-style) */
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+    /* ===== VOICELESS Animated Button ===== */
+    .voiceless-btn {
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        --border-right: 6px;
+        --text-stroke-color: rgba(255, 255, 255, 0.6);
+        --animation-color: #45ff8b;
+        --fs-size: 1.8rem;
+        letter-spacing: 4px;
+        font-size: var(--fs-size);
+        font-family: "Arial", sans-serif;
+        position: relative;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px var(--text-stroke-color);
+    }
+    .voiceless-btn .hover-text {
+        position: absolute;
+        inset: 0;
+        width: 0%;
+        overflow: hidden;
+        border-right: var(--border-right) solid var(--animation-color);
+        color: var(--animation-color);
+        transition: width 0.5s ease;
+        -webkit-text-stroke: 1px var(--animation-color);
+    }
+    .voiceless-btn:hover .hover-text {
+        width: 100%;
+        filter: drop-shadow(0 0 20px var(--animation-color));
+    }
+    /* Delayed VOICELESS hover autoplay */
+    .auto-hover .hover-text {
+        width: 0%;
+        animation: voicelessReveal 0.5s ease forwards;
+        animation-delay: 0.75s;
+        /* ⏱️ 3 second delay */
+        border-right: var(--border-right) solid var(--animation-color);
+        filter: drop-shadow(0 0 23px var(--animation-color));
+    }
+    @keyframes voicelessReveal {
+        to {
+            width: 100%;
+        }
+    }
+    /* Freeze state */
+    .auto-hover {
+        pointer-events: none;
+    }
+    /* --- Glass panel glow --- */
+    .glass-panel {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 16px;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 8px 30px rgba(0, 140, 255, 0.18), inset 0 0 18px rgba(255, 255, 255, 0.06);
+        transition: box-shadow 0.3s ease;
+    }
+    .glass-panel:hover {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 12px 40px rgba(0, 180, 255, 0.35), inset 0 0 22px rgba(255, 255, 255, 0.1);
+    }
+    .bg-ink-black {
+        background-color: #000203;
+    }
+}

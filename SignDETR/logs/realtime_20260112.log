@@ -1,0 +1,6 @@
+2026-01-12 00:29:41,813 - realtime - INFO - [realtime] Initializing real-time sign language detection...[/realtime]
+2026-01-12 00:29:42,399 - realtime - INFO - [realtime] Starting camera capture...[/realtime]
+2026-01-12 00:31:12,063 - realtime - INFO - [realtime] Stopping real-time detection...[/realtime]
+2026-01-12 22:32:28,964 - realtime - INFO - [realtime] Initializing real-time sign language detection...[/realtime]
+2026-01-12 22:32:29,563 - realtime - INFO - [realtime] Starting camera capture...[/realtime]
+2026-01-12 22:32:55,798 - realtime - INFO - [realtime] Stopping real-time detection...[/realtime]
