@@ -1,0 +1,13 @@
+recipe: default.v1
+assistant_id: sign_language_assistant
+
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  
+
+
+policies:
+  - name: RulePolicy

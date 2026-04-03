@@ -1,0 +1,88 @@
+# Exclusions requested by user
+arnab.zip
+pretrained/
+data/
+
+# Sensitive info
+.env
+.env*
+credentials.yml
+endpoints.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js
+node_modules/
+dist/
+build/
+.next/
+out/
+.nuxt/
+.vercel/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Bun
+bun.lockb
+node_modules/
+
+# Files to ignore (large binaries)
+*.rar
+*.zip
+*.7z
+*.tar
+*.gz
+*.mp4
+*.mkv
+*.avi
+*.dll
+*.pyd
+*.so
+*.dylib
+*.exe
+*.bin
+*.models
+*.weights
+*.h5
+*.h5py
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+SignDETR/.venv/
+SignDETR/checkpoints/*.pt
+!SignDETR/checkpoints/99_model.pt
+!SignDETR/checkpoints/m99_model.pt
+my-rasa-assistant/.venv/
+my-rasa-assistant/.rasa/
+my-rasa-assistant/models/
+my-rasa-assistant/.github/

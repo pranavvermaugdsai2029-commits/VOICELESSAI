@@ -1,0 +1,13 @@
+#TYPE Selected.System.IO.FileInfo
+"Name","FullName","Size(MB)"
+"10_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\10_model.pt","103.09"
+"20_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\20_model.pt","103.09"
+"30_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\30_model.pt","103.09"
+"40_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\40_model.pt","103.09"
+"50_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\50_model.pt","103.09"
+"60_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\60_model.pt","103.09"
+"70_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\70_model.pt","103.09"
+"80_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\80_model.pt","103.09"
+"90_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\90_model.pt","103.09"
+"99_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\checkpoints\99_model.pt","103.09"
+"4426_model.pt","C:\Users\Pranav\OneDrive\Desktop\VOICELESS AI\SignDETR\pretrained\4426_model.pt","103.07"

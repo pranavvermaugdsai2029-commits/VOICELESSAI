@@ -1,0 +1,102 @@
+{
+  "sign_yes": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_c": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_b": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_okay": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5.0,
+    "confused_with": {
+      "": 5
+    }
+  },
+  "sign_thank_you": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_hello": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_a": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_i": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "sign_this": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3.0,
+    "confused_with": {
+      "": 3
+    }
+  },
+  "micro avg": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 29.0
+  },
+  "macro avg": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 29.0
+  },
+  "weighted avg": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 29.0
+  },
+  "accuracy": 0.0
+}
