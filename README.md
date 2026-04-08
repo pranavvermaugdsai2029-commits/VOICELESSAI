@@ -19,3 +19,5 @@ VOICELESS AI is a comprehensive suite for sign language recognition and communic
 Refer to the individual `README.md` files in each subdirectory for specific setup instructions.
 
 Detailed Description of the Project-https://youtu.be/eaDSbAYwchs
+
+THIS IS NOT THE FULL PROJECT BUT AN ITERATED SAMPLE OF IT
